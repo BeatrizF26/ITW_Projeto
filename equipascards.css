@@ -1,0 +1,43 @@
+﻿.card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s;
+    background-color: inherit;
+    color: grey;
+    height: 90%;
+}
+
+    .card:hover {
+        transform: scale(1.2);
+        border-color: darkblue;
+        z-index: 1;
+    }
+
+        .card:hover .btn-container {
+            opacity: 1;
+            transition: opacity 0.4s;
+        }
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+    /* Adicionado um pouco de espaço extra para o ícone do coração */
+    .btn-container .fa {
+        margin-top: 2px;
+    }
+
+    /* Estilo para os botões */
+    .btn-container a,
+    .btn-container button {
+        color: #555;
+        text-decoration: none;
+    }
+
+        .btn-container a:hover,
+        .btn-container button:hover {
+            color: #333;
+        }

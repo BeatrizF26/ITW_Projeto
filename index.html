@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ITW - NBA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/ ">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css " rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <link href="cabecalho.css" rel="stylesheet" />
+    <style>
+        .carousel-item {
+            z-index: -100;
+            height: 650px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+            .carousel-item:nth-child(1) {
+                background-image: url('Imagens/Carrossel - 1.jpg');
+            }
+
+            .carousel-item:nth-child(2) {
+                background-image: url('Imagens/Carrossel - 2.jpg');
+            }
+
+            .carousel-item:nth-child(3) {
+                background-image: url('Imagens/Carrossel - 3.jpg');
+            }
+
+        .modo-escuro {
+            background-color: #28242c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" tabindex="NBA"><img src="Imagens/nba.webp" style="height:75px; width:90px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="arenas.html"><i class="fa fa-home"></i> Arenas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="equipas.html"><i class="fa fa-users"></i> Equipas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="jogadores.html"><i class="fa fa-user"></i> Jogadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="temporadas.html"><i class="fa fa-trophy"></i> Temporadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle texto" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-navicon"></i> Extras</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="este.html">East Conference</a></li>
+                                <li><a class="dropdown-item" href="oeste.html">Western Conference</a></li>
+                                <li><a class="dropdown-item" href="states.html">Estados</a></li>
+                                <li><a class="dropdown-item" href="posicoes.html">Posições</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="informacoes.html">Informações</a></li>
+                                <li><a class="dropdown-item" href="ticket.html">Bilhetes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <i class="fa fa-moon-o" style="color:white"></i>
+                <button id="modo" class="btn"><i class="fa fa-toggle-on" style="color:white;" id="simbolo"></i></button>
+                <i class="fa fa-sun-o" style="color:white;"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Working Area -->
+    <div class="container-fluid" style="margin:0; padding:0;">
+        <div id="myCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption d-md-block">
+                        <h5><b>Momentos Históricos</b></h5>
+                        <p>Curry foi crucial para a temporada dos Warriors, mas não bastou para revalidarem o título </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-md-block">
+                        <h5><b>A protagonista</b></h5>
+                        <p>Participante de todos os jogos e momentos marcantes da NBA</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-md-block">
+                        <h5><b>Ginásios repletos</b></h5>
+                        <p>Os locais mais emblemáticos do campeonato americano</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container text-center">
+        <h3>História da NBA</h3>
+    </div>
+    <div class="container text-sm-center text-lg-start col-sm-12">
+        <p>
+            A NBA foi fundada em 6 de junho de 1946, sob o nome de Basketball Association of America (BAA). A ideia era criar uma liga profissional de basquetebol para capitalizar o crescente interesse no desporto. Em 1949, a BAA fundiu-se com a National Basketball League (NBL) para formar a National Basketball Association (NBA), adotando o nome que conhecemos hoje.
+        </p>
+        <p>
+            Na década de 1950, testemunhou-se o surgimento dos Boston Celtics, uma equipa de basquetebol que foi liderada por uma figura notável, Bill Russell. Os Celtics impuseram a sua supremacia na liga, alcançando a notável conquista de 11 títulos em apenas 13 anos. Este feito estabeleceu um dos períodos mais bem-sucedidos e marcantes na história da National Basketball Association (NBA). Sob a liderança de Russell, os Celtics não apenas dominaram o cenário desportivo, mas também deixaram um legado duradouro, contribuindo significativamente para a história e tradição da NBA. O sucesso consistente dos Celtics durante essa época é reconhecido como uma das realizações mais impressionantes e influentes no mundo do basquetebol.
+        </p>
+        <div class="container text-center">
+            <img src="Imagens/Celtics-1950.jpeg" class="img-fluid" alt="Equipa dos Celtics na década de 50" />
+            <p></p>
+        </div>
+        <p>
+            Wilt Chamberlain, uma das maiores estrelas do basquetebol, registou feitos lendários, incluindo a pontuação recorde de 100 pontos num único jogo em 1962. A sua presença teve um impacto profundo na dinâmica do jogo, a capacidade de pontuar e a presença defensiva alteraram a forma como as equipas jogavam contra ele. A sua influência transcendeu as estatísticas, moldando estratégias e táticas da liga.
+            A rivalidade lendária entre Magic Johnson e Larry Bird durante os anos 1980 trouxe uma nova dimensão à NBA. Suas batalhas nas finais reacenderam o interesse nacional pelo basquetebol.
+            A rivalidade atingiu seu auge nos anos 1980, quando os Lakers e os Celtics se encontraram em várias finais da NBA. Os confrontos anuais entre Magic e Bird nas finais tornaram-se eventos esportivos de destaque, atraindo uma audiência nacional e internacional significativa. Essas batalhas não eram apenas sobre dois jogadores, mas também simbolizavam a rivalidade histórica entre as duas cidades, Los Angeles e Boston, e entre as duas conferências, Oeste e Este.
+        </p>
+        <p>
+            Jordan liderou os Chicago Bulls a seis títulos da NBA durante os anos 1990, formando uma dinastia na liga. A sua mentalidade competitiva e habilidades excecionais foram fundamentais para esse sucesso.
+            Conhecido pelo seu estilo de jogo incrivelmente atlético e pontuações impressionantes, Jordan conquistou 10 títulos de pontuação da NBA. Ele tinha uma capacidade única de brilhar nos momentos mais cruciais.
+        </p>
+        <p>
+            O início dos anos 2000 viu o surgimento de super times como os Los Angeles Lakers de Kobe Bryant e Shaquille O'Neal e os San Antonio Spurs. Várias equipas competiram intensamente por títulos.
+        </p>
+        <p>
+            Kobe Bryant foi peça-chave nos cinco títulos conquistados pelos Los Angeles Lakers ao longo da sua carreira. Ele era conhecido pela sua ética de trabalho implacável e pela habilidade de liderar a sua equipa nos momentos decisivos.
+            Apelidado de "Black Mamba", Kobe era famoso pela sua mentalidade competitiva semelhante à de uma serpente, nunca recuando de desafios. Essa mentalidade feroz tornou-o uma figura respeitada entre colegas de equipa e adversários.
+            Kobe Bryant era conhecido pela sua versatilidade no campo, capaz de pontuar de várias maneiras e contribuir em todas as áreas do jogo. Ele acumulou inúmeros recordes ao longo da sua carreira.
+        </p>
+        <div class="container text-center">
+            <img src="Imagens/Jordan e Bryant.jpg" class="img-fluid" alt="Jordan e Bryant" />
+            <p></p>
+        </div>
+        <p>
+            Jordan e Bryant enfrentaram-se várias vezes em jogos regulares da NBA quando Kobe Bryant era uma estrela ascendente nos Los Angeles Lakers. Esses duelos geravam grande expectativa e eram momentos emocionantes para os fãs.
+            Um momento particularmente significativo ocorreu na última temporada de Michael Jordan com os Washington Wizards em 2002-2003. Nesse período, Jordan enfrentou os Lakers e Kobe Bryant numa série de jogos, incluindo um jogo final entre os dois lendários jogadores.
+        </p>
+        <p>
+            A entrada de LeBron James na NBA em 2003 marcou o início de uma nova era. LeBron tornou-se um ícone global, liderando várias equipas a títulos e continuando a influenciar a liga.
+            Desde o início, ficou claro que estava destinado a ser uma estrela, devido à sua habilidade e visão de jogo, tornou-se uma presença constante nos playoffs e estabeleceu-se como uma das estrelas em ascensão da liga.
+            Em 2020, liderou os Lakers a mais um título da NBA, consolidando o seu estatuto como um dos melhores jogadores de sempre.
+        </p>
+        <p>
+            Os playoffs de 2023 foram repletos de surpresas, os Nuggets, com 53 vitórias, avançaram para  as primeiras finais na sua história e perderam apenas três jogos no caminho. Após atuações notáveis nas finais da Conferência Oeste e Leste, respectivamente, Jokic e Butler receberam os troféus Magic Johnson (Oeste) e Larry Bird (Leste) antes das finais.
+            Após uma espera de 47 anos, os Nuggets se tornaram campeões da NBA após uma vitória no Jogo 5 contra o Heat, onde Nikola Jokic foi nomeado o MVP das Finais da NBA. Mas a história das finais de 2023 foi sobre Jokic. Ele fez história como o primeiro jogador a liderar todas as principais categorias estatísticas em uma pós-temporada, acumulando 600 pontos totais e 190 assistências terminando a sua primeira série de finais com média de 30,2 pontos por jogo e foi considerado o MVP das Finais.
+        </p>
+    </div>
+    <!-- End of Working Area -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid small text-center">
+            <div class="navbar-text col-sm-3">&copy;  Introdução as Tecnologias Web - 2023/24</div>
+            <div class="navbar-text col-sm-3"><i class="fa fa-desktop"></i> Feito por <a href="mailto:beatriz.francisco26@ua.pt" class="text-decoration-none text-secondary">Beatriz </a> e <a href="mailto:catarinamr36@ua.pt" class="text-decoration-none text-secondary">Catarina</a> <i class="fa fa-desktop"></i></div>
+            <div class="navbar-nav col-sm-3">
+                <div class="nav-item text-end text-center"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="modoescuro.js"></script>
+</body>
+</html>

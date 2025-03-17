@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NBA - Informações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/ ">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css " rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet" />
+    <link href="cabecalho.css" rel="stylesheet" />
+    <style>
+        .modo-escuro {
+            background-color: #28242c;
+            color: #fff;
+        }
+
+        .bg-accordion {
+            background-color: #28242c;
+            color: #fff
+        }
+
+        .offcanvas-header {
+            background-color: rgb(68, 68, 68);
+            color: #fff;
+        }
+
+        .offcanvas-body {
+            background-color: rgb(68, 68, 68);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" tabindex="NBA"><img src="Imagens/nba.webp" style="height:75px; width:90px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="arenas.html"><i class="fa fa-home"></i> Arenas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="equipas.html"><i class="fa fa-users"></i> Equipas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="jogadores.html"><i class="fa fa-user"></i> Jogadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="temporadas.html"><i class="fa fa-trophy"></i> Temporadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle texto" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-navicon"></i> Extras</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="este.html">East Conference</a></li>
+                                <li><a class="dropdown-item" href="oeste.html">Western Conference</a></li>
+                                <li><a class="dropdown-item" href="states.html">Estados</a></li>
+                                <li><a class="dropdown-item" href="posicoes.html">Posições</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="informacoes.html">Informações</a></li>
+                                <li><a class="dropdown-item" href="ticket.html">Bilhetes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <i class="fa fa-moon-o" style="color:white"></i>
+                <button id="modo" class="btn"><i class="fa fa-toggle-on" style="color:white;" id="simbolo"></i></button>
+                <i class="fa fa-sun-o" style="color:white;"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin:0px; padding:0px;">
+        <img src="Imagens/logo.jpg" style="max-width:100%" />
+    </div>
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" style="color: white; background-color: rgb(68, 68, 68);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><strong>Quais foram os links da API utilizados?</strong></button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Usámos estes links:
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop1" aria-controls="offcanvasWithBackdrop1">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" style="color: white; background-color: rgb(68, 68, 68);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><strong>Sobre nós:</strong></button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="text-align: center;">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <strong>Beatriz Francisco</strong>
+                                    <p><a href="mailto:beatriz.francisco26@ua.pt" class="text-decoration-none text-secondary">beatriz.francisco26@ua.pt</a></p>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <strong>Catarina Ribeiro</strong>
+                                    <p><a href="mailto:catarinamr36@ua.pt" class="text-decoration-none text-secondary">catarinamr36@ua.pt</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" style="color: white; background-color: rgb(68, 68, 68);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><strong>Meios oficiais da NBA</strong></button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body text-center">
+                        <p>Podes acompanhar tudo sobre a NBA seguindo as redes sociais oficiais da competição:</p>
+                        <a class="btn btn-outline-primary btn-floating m-1" href="https://www.facebook.com/nba/" role="button"><i class="fa fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-floating m-1" href="https://twitter.com/nba" role="button"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-floating m-1" href="https://www.instagram.com/nba/" role="button"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OfCanvas -->
+        <div class="offcanvas offcanvas-start background" tabindex="-1" data-bs-scroll="true" data-bs-backdrop="false" id="offcanvasWithBackdrop1" aria-labelledby="offcanvasWithBackdropLabel1">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"><strong>Links da API</strong></h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul type="disc">
+                    <li>GET api/Arenas</li>
+                    <li>GET api/Arenas/{id}</li>
+                    <li>GET api/Arenas/Search?q={q}</li>
+                    <li>GET api/Conferences/{id}</li>
+                    <li>GET api/Players</li>
+                    <li>GET api/Players/{id}</li>
+                    <li>GET api/Players/Search?q={q}</li>
+                    <li>GET api/Positions</li>
+                    <li>GET api/Positions/{id}</li>
+                    <li>GET api/Seasons</li>
+                    <li>GET api/Seasons/{id}</li>
+                    <li>GET api/States</li>
+                    <li>GET api/States/{id}</li>
+                    <li>GET api/Statistics/NumPlayersBySeason</li>
+                    <li>GET api/Statistics/PlayerRankBySeason?playerId={playerId}</li>
+                    <li>GET api/Teams</li>
+                    <li>GET api/Teams/{id}?acronym={acronym}</li>
+                    <li>GET api/Teams/Search?q={q}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid small text-center">
+            <div class="navbar-text col-sm-3">&copy;  Introdução as Tecnologias Web - 2023/24</div>
+            <div class="navbar-text col-sm-3"><i class="fa fa-desktop"></i> Feito por <a href="mailto:beatriz.francisco26@ua.pt" class="text-decoration-none text-secondary">Beatriz </a> e <a href="mailto:catarinamr36@ua.pt" class="text-decoration-none text-secondary">Catarina</a> <i class="fa fa-desktop"></i></div>
+            <div class="navbar-nav col-sm-3">
+                <div class="nav-item text-end text-center"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="modoescuro.js"></script>
+</body>
+</html>

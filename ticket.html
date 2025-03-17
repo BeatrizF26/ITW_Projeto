@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NBA - Tickets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/ ">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cabecalho.css" />
+    <link rel="stylesheet" href="ticket.css" />
+    <style>
+        .modo-escuro {
+            background-color: #28242c;
+            color: white;
+        }
+    </style>
+
+</head>
+<body style="width:100vw;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" tabindex="NBA"><img src="Imagens/nba.webp" style="height:75px; width:90px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="arenas.html"><i class="fa fa-home"></i> Arenas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="equipas.html"><i class="fa fa-users"></i> Equipas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="jogadores.html"><i class="fa fa-user"></i> Jogadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="temporadas.html"><i class="fa fa-trophy"></i> Temporadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle texto" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-navicon"></i> Extras</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="este.html">East Conference</a></li>
+                                <li><a class="dropdown-item" href="oeste.html">Western Conference</a></li>
+                                <li><a class="dropdown-item" href="states.html">Estados</a></li>
+                                <li><a class="dropdown-item" href="posicoes.html">Posições</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="informacoes.html">Informações</a></li>
+                                <li><a class="dropdown-item" href="ticket.html">Bilhetes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <i class="fa fa-moon-o" style="color:white"></i>
+                <button id="modo" class="btn"><i class="fa fa-toggle-on" style="color:white;" id="simbolo"></i></button>
+                <i class="fa fa-sun-o" style="color:white;"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1>Bilheteira Online</h1>
+        <div class="cart-box">
+            <div class="cart-icon">
+                <i class="fa fa-cart-arrow-down fa-2x"></i>
+            </div>
+            <div class="whole-cart-window hide" style="color:black">
+                <h2>Ticket Cart</h2>
+                <div class="cart-wrapper">
+                    <!-- <div class="cart-item">
+                       <img src="">
+                       <div class="details">
+                           <h3></h3>
+                           <p>
+                             <span class="quantity">Quantidade: 1</span>
+                                <span class="price">Preço: 00.00</span>
+                            </p>
+                       </div>
+                       <div class="cancel"><i class="fa fa-window-close"></i></div>
+                    </div> -->
+                    <!-- item 2 -->
+                    <!-- <div class="cart-item">
+                       <img src="">
+                       <div class="details">
+                           <h3></h3>
+                           <p>
+                            <span class="quantity">Quantidade: 1</span>
+                               <span class="price">Preço: 00.00</span>
+                           </p>
+                       </div>
+                       <div class="cancel"><i class="fa fa-window-close"></i></div>
+                    </div> -->
+                </div>
+                <div class="subtotal">Subtotal: € 0.00</div>
+                <div><button type="button" class="btn btn-primary checkout" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid" style="width:100%">
+        <div class="card-wrapper">
+            <div data-id="1" class="card-item col-4">
+                <img src="Imagens/Jogo1.jpg" />
+                <div class="details">
+                    <h3>Lakers vs Warriors</h3>
+                    <p>
+                        <span>28 de janeiro, Domingo <br><a href="./arenaDetails.html?id=12" class="link">Staples Center</a></span>
+                        <span class="price">Preço: € 95.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; background-color:lightgray; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- product 2 -->
+            <div data-id="2" class="card-item col-4">
+                <img src="Imagens/Jogo2.jpg" />
+                <div class="details">
+                    <h3>Phoenix Suns vs Utah Jazz</h3>
+                    <p>
+                        <span>20 de janeiro, Sábado <br><a href="./arenaDetails.html?id=28" class="link">Vivint Smart Home Arena</a></span>
+                        <span class="price">Preço: € 60.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 3 -->
+            <div data-id="3" class="card-item col-4">
+                <img src="Imagens/Jogo3.jpg" />
+                <div class="details">
+                    <h3>Nuggets vs Timberwolves</h3>
+                    <p>
+                        <span>17 de dezembro, Domingo <br><a href="./arenaDetails.html?id=10" class="link">Pepsi Center</a></span>
+
+                        <span class="price">Preço: € 45.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 4 -->
+            <div data-id="4" class="card-item col-4">
+                <img src="Imagens/Jogo4.jpg" />
+                <div class="details">
+                    <h3>Bucks vs Heat</h3>
+                    <p>
+                        <span>8 de janeiro, Segunda-feira <br><a href="./arenaDetails.html?id=15" class="link">Fiserv Forum</a></span>
+                        <span class="price">Preço: € 80.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 5 -->
+            <div data-id="5" class="card-item col-4">
+                <img src="Imagens/Jogo5.jpg" />
+                <div class="details">
+                    <h3>Wizards vs Spurs</h3>
+                    <p>
+                        <span>21 de janeiro, Domingo <br><a href="./arenaDetails.html?id=30" class="link">Capital One Arena</a></span>
+                        <span class="price">Preço: € 65.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 6 -->
+            <div data-id="6" class="card-item col-4">
+                <img src="Imagens/Jogo6.jpg" />
+                <div class="details">
+                    <h3>Hornets vs Kings</h3>
+                    <p>
+                        <span>3 de janeiro, Quarta-feira <br><a href="./arenaDetails.html?id=24" class="link">Golden 1 Center</a></span>
+                        <span class="price">Preço: € 50.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 7 -->
+            <div data-id="7" class="card-item col-4">
+                <img src="Imagens/Jogo7.jpg" />
+                <div class="details">
+                    <h3>Mavericks vs Phoenix Suns</h3>
+                    <p>
+                        <span>25 de janeiro, Quinta-feira <br><a href="./arenaDetails.html?id=3" class="link">American Airlines</a></span>
+                        <span class="price">Preço: € 60.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 8 -->
+            <div data-id="8" class="card-item col-4">
+                <img src="Imagens/Jogo8.jpg" />
+                <div class="details">
+                    <h3>Rockets vs Orlando Magic</h3>
+                    <p>
+                        <span>20 de dezembro, Quarta-feira <br><a href="./arenaDetails.html?id=11" class="link">Toyota Center</a></span>
+                        <span class="price">Preço: € 55.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product 9 -->
+            <div data-id="9" class="card-item col-4">
+                <img src="Imagens/Jogo9.jpg" />
+                <div class="details">
+                    <h3>Knicks vs Lakers</h3>
+                    <p>
+                        <span>19 de dezembro, Terça-feira <br><a href="./arenaDetails.html?id=18" class="link">Madison Square Garden</a></span>
+                        <span class="price">Preço: € 90.00</span>
+                        <span class="add-to-cart-btn" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Bilhete adicionado" onclick="Toasty()">Adicionar ao carrinho</span>
+                    </p>
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; top: 125px; right: 5px;">
+                        <div class="toast-body" style="color: darkblue; text-align: center;">
+                            Bilhete Adicionado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Checkout</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h4>Preencha os seus dados para confirmar o seu pedido</h4>
+                        <form class="row g-3 needs-validation" novalidate action="http://192.168.160.36/FormEcho.aspx" method="post">
+                            <div class="col-md-6 form-floating">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="FirstName" id="validationCustom01" value="" pattern=".{3,}" required>
+                                    <label for="validationCustom01" class="form-label">Nome</label>
+                                    <div class="invalid-feedback"><i class="fa fa-warning"></i> Insira o primeiro nome. (Mínimo, 3 carateres)</div>
+                                </div><br>
+
+
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="LastName" id="validationCustom02" value="" pattern=".{3,}" required>
+                                    <label for="validationCustom02" class="form-label">Sobrenome</label>
+                                    <div class="invalid-feedback"><i class="fa fa-warning"></i> Insira o último nome. (Mínimo, 3 carateres)</div>
+                                </div><br>
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" name="Username" id="validationCustomUsername" required>
+                                    <label for="validationCustomUsername" class="form-label">E-mail</label>
+                                    <div class="invalid-feedback"><i class="fa fa-warning"></i> Insira um email válido.</div>
+                                </div>
+                            </div><br>
+
+                            <div class="col-md-6">
+                                <div class="card border-primary mb-3" style="max-width: 15rem; max-height: 17rem;">
+                                    <div class="card-header text-primary">Método de pagamento</div>
+                                    <div class="card-body">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" name="pagamento" id="pagamento1" required>
+                                            <label class="form-check-label" for="pagamento1" style="float: right;"><i class="fa fa-cc-visa" aria-hidden="true"></i> Visa Payment</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" name="pagamento" id="pagamento2" required>
+                                            <label class="form-check-label" for="pagamento2" style="float: right;"><i class="fa fa-paypal" aria-hidden="true"></i> Paypal</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" name="pagamento" id="pagamento3" required>
+                                            <label class="form-check-label" for="pagamento3" style="float: right;"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Master Card</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" name="pagamento" id="pagamento4">
+                                            <label class="form-check-label" for="pagamento4" style="float: right;"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Multibanco</label><br>
+                                            <div class="invalid-feedback small"><i class="fa fa-warning"></i> Escolha uma das opções.</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="InvalidCheck" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">Concordo com os Termos e Condições.</label>
+                                    <div class="invalid-feedback"><i class="fa fa-warning"></i> Tem de concordar com os Termos e Condições.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Confirmar Dados</button>
+                                <button class="btn btn-dark btn-sm" type="reset"><i class="fa fa-trash-o"></i> Recomeçar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid small text-center">
+            <div class="navbar-text col-sm-3">&copy;  Introdução as Tecnologias Web - 2023/24</div>
+            <div class="navbar-text col-sm-3"><i class="fa fa-desktop"></i> Feito por <a href="mailto:beatriz.francisco26@ua.pt" class="text-decoration-none text-secondary">Beatriz </a> e <a href="mailto:catarinamr36@ua.pt" class="text-decoration-none text-secondary">Catarina</a> <i class="fa fa-desktop"></i></div>
+            <div class="navbar-nav col-sm-3">
+                <div class="nav-item text-end text-center"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="ticket.js"></script>
+    <script src="modoescuro.js"></script>
+    <script>var option = {
+            animation: true,
+            delay: 2000
+        };
+
+        function Toasty() {
+            var toast = document.getElementById("liveToast");
+            var toast1 = new bootstrap.Toast(toast, option);
+            toast1.show();
+            $('#sub').val(null);
+        };</script>
+</body>
+</html>

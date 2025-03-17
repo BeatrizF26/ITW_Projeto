@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ITW 2023/24 - NBA Arena Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/ ">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css " rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet" />
+    <link rel="stylesheet" href="cabecalho.css" />
+    <style>
+
+        .modo-escuro {
+            background-color: #28242c;
+            color: #fff;
+        }
+
+        .frame {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" tabindex="NBA"><img src="Imagens/nba.webp" style="height:75px; width:90px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="arenas.html"><i class="fa fa-home"></i> Arenas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="equipas.html"><i class="fa fa-users"></i> Equipas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="jogadores.html"><i class="fa fa-user"></i> Jogadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="temporadas.html"><i class="fa fa-trophy"></i> Temporadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto" href="favoritos.html"><i class="fa fa-heart"></i> Favoritos</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle texto" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-navicon"></i> Extras</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="este.html">East Conference</a></li>
+                                <li><a class="dropdown-item" href="oeste.html">Western Conference</a></li>
+                                <li><a class="dropdown-item" href="states.html">Estados</a></li>
+                                <li><a class="dropdown-item" href="posicoes.html">Posições</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="informacoes.html">Informações</a></li>
+                                <li><a class="dropdown-item" href="ticket.html">Bilhetes</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <i class="fa fa-moon-o" style="color:white"></i>
+                <button id="modo" class="btn"><i class="fa fa-toggle-on" style="color:white;" id="simbolo"></i></button>
+                <i class="fa fa-sun-o" style="color:white;"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Work Area-->
+    <div class="container">
+        <div class="py-2 border-bottom mb-3">
+            <h2 data-bind="text:Name()"></h2>
+        </div>
+        <!-- ko if:Name().length > 0 -->
+        <div class="row border-bottom g-2">
+            <div class="col-2">Name</div><div class="col-10" data-bind="text: Name"></div>
+        </div>
+        <div class="row border-bottom g-2">
+            <div class="col-2">State</div><div class="col-10"><a class="nav-link" data-bind="text:StateName, attr: { href:'./stateDetails.html?id=' + StateId() }" title="Show State Details"></a></div>
+        </div>
+        <div class="row border-bottom g-2">
+            <div class="col-2">Team</div>
+            <div class="col-10"><a class="nav-link" data-bind="text:'[' + TeamAcronym() + '] ' + TeamName(), attr: { href:'./equipaDetails.html?id=' + TeamId() + '&acronym=' + TeamAcronym() }" title="Show Team Details"></a></div>
+        </div>
+        <div class="row border-bottom g-2">
+            <div class="col-2">Location</div><div class="col-10" data-bind="text: Location"></div>
+        </div>
+        <div class="row border-bottom g-2">
+            <div class="col-2">Capacity</div><div class="col-10" data-bind="text: Capacity"></div>
+        </div>
+        <!-- ko if:Opened() && Opened().length > 0 -->
+        <div class="row border-bottom g-2">
+            <div class="col-2">Opened</div><div class="col-10" data-bind="text: Opened"></div>
+        </div>
+        <!-- /ko -->
+        <div class="row border-bottom g-2" data-bind="visible: Photo() != '' && Photo() != null">
+            <div class="col-2">Photo</div><div class="small col-10">
+                <img class="img-thumbnail" data-bind="attr:{src: Photo}"><br />
+                <i class="fa fa-link"></i> [<a class="link-secondary text-decoration-none" data-bind="attr: { href: Photo }, text: Photo"></a>]
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"><h2>Localização:</h2></div>
+            <iframe class="frame" data-bind="attr: { src: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCVwciWzh2KoSiWjSCVY1z6vlYoH0hQ8gs&q=' + encodeURIComponent(Name() + ',' + Location())}"></iframe>
+        </div>
+        <!-- /ko -->
+        <a href="arenas.html" class="btn btn-default btn-sm small text-secondary"><i class="fa fa-list"></i> Voltar à lista das arenas</a>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <img src="Imagens/nba.webp" style="height:100px" /> A carregar dados...
+                    </h5>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fa fa-spin fa-3x fa-refresh"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Work Area -->
+    <nav class="navbar navbar-dark bg-dark navbar-fixed-bottom">
+        <div class="container-fluid small text-center">
+            <div class="navbar-text col-sm-3">&copy;  Introdução as Tecnologias Web - 2023/24</div>
+            <div class="navbar-text col-sm-3"><i class="fa fa-desktop"></i> Feito por <a href="mailto:beatriz.francisco26@ua.pt" class="text-decoration-none text-secondary">Beatriz </a> e <a href="mailto:catarinamr36@ua.pt" class="text-decoration-none text-secondary">Catarina</a> <i class="fa fa-desktop"></i></div>
+            <div class="navbar-nav col-sm-3">
+                <div class="nav-item text-end text-center"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+            </div>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="arenaDetails.js"></script>
+    <script src="modoescuro.js"></script>
+</body>
+</html>
